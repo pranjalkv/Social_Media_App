@@ -1,0 +1,65 @@
+#few-user
+{
+    margin-top: 40px;
+    margin-left: 20%;
+    width: 300px;
+    position: relative;
+}
+.div-few-user
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    margin: 0 auto;
+}
+.few-user-img
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    object-fit: contain;
+}
+.info-few
+{
+    width: (100%-55px);
+    height:  100%;
+    padding-top: 13px;
+    display: flex;
+    flex-direction: row;
+    text-overflow: ellipsis;
+    justify-content: space-between;
+}
+.info-few a,.info-few a.active,.info-few a:hover
+{
+    color:var(--black);
+}
+.name-few-user
+{
+    font-size: 1.2em;
+    margin-left: 4px;
+    padding: 0%;
+    margin-top: 0;
+    white-space: nowrap; 
+  width: 180px; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  color: #b8b6b6;
+}
+.few-follow-btn
+{
+    position: absolute;
+    right: 0;
+    border-radius: 6px;
+    padding: 3px 6px;
+    background-color: var(--green);
+    border: none;
+    color: #ffffff;
+    font-weight: 300;
+}
+.footer-style
+{
+    font-weight: 600;
+    color: #b8b6b6;
+    text-align: center;
+}

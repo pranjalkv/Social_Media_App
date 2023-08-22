@@ -1,0 +1,248 @@
+#user-profile
+{
+  margin-left: 16%;
+  width: 82%;
+  font-size: 100%;
+  padding-bottom: 5%;
+}
+.div-under-profile
+{
+  display: flex;
+  justify-content: center;
+}
+#main-profile
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    width: 704px;
+    padding-bottom: 2%; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+    position: relative;
+}
+.photo-heading
+{
+  position: absolute;
+  bottom: -13%;
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 4px;
+  background-color: #ffffff;
+  color:#0000006b ;
+  padding: 0 6px;
+  text-align: center;
+}
+.profile-page {
+  width: 60%;
+  padding: 20px
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  position: center;
+  object-fit: cover;
+  border-radius: 100%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.prof-name {
+    margin-top: 1%;
+  font-size: 2em;
+  margin-right: 20px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+.profile-user
+{
+  margin-top: 10px;
+    font-weight: 600;
+
+}
+.edit-pro-btn
+{
+  padding: 8px 16px;
+  background-color: #dddddd;
+  color: #000000;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.follow-pro-btn
+{
+  padding: 8px 16px;
+  background-color: var(--green);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.follow-done
+{
+  background-color: #dddddd !important;
+  color: #000000 !important;
+}
+.div-follow
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+.div-follow>p
+{
+    font-size: 1.2em;
+}
+.line-prof
+{
+    text-align: center;
+    width: 100%;
+    border-style:solid none none none;
+}
+.changeImg
+{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  background-color: #0000003b;
+}
+.changeImg>.card
+{
+  margin-top: 15%;
+  max-height: 175px;
+  min-height: 160px;
+  text-align: center;
+--bs-card-height:30%
+}
+.unfollow-div
+{
+     position: absolute;
+    z-index: 14;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    text-align: center;
+    top: 0;
+    background-color: #0000006e;
+}
+.editProfile
+{
+  position: fixed;
+    z-index: 12;
+    left: 0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000006e;
+}
+.bio-area
+{
+     width: 100%;
+  resize: none;
+  margin-bottom: 1%;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.124);
+  font-size: 1.2em;
+  padding: 1%;
+  height: 120px;
+}
+.bio-part
+{
+  font-size: 1.1em;
+  font-style: italic;
+  overflow: hidden;
+  word-wrap:nowrap;
+  text-overflow: clip;
+}
+.err-noProf
+{
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  padding-top: 10%;
+  color: #888888;
+}
+@media (max-width:1368px) and (min-width:768px)
+{
+  #user-profile
+  {
+    width: 88%;
+    margin-left:90px;
+    font-size: 85%;
+  }
+  #main-profile
+  {
+    width: 80%;
+    max-width: 704px;
+  }
+  .profile-picture {
+  width: 120px;
+  height: 120px;
+  border: 1px solid black;
+  }
+}
+@media (max-width:768px)
+{
+  #user-profile
+  {
+    font-size: 70%;
+    margin-top: 60px;
+    margin-left: 0;
+    width: 100%;
+
+  }
+  #main-profile
+  {
+    display: block;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 594px;
+  }
+  .profile-page
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .photo-heading
+  {
+    left:40%;
+    bottom:-9%;
+  }
+  .profile-header
+  {
+    margin: 2% auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .profile-picture 
+  {
+    width: 20vw;
+    height: 20vw;
+    border: 1px solid black;
+  }
+  .div-follow>p
+  {
+    padding:0 auto;
+    text-align: center;
+  }
+  .profile-page
+  {
+    width: 100%;
+  }
+}

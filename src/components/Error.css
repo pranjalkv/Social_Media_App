@@ -1,0 +1,38 @@
+.error-page
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark);
+    text-align: center;
+    font-size: 100%;
+    height: 82vh;
+}
+.error-head
+{
+    font-size: 3em;
+    font-weight: 500;
+}
+.error-title
+{
+    font-size: 2em;
+    font-weight: 600;
+}
+.error-page button
+{
+    margin: 3% auto;
+}
+@media(max-width:1024px) and (min-width:600px)
+{
+    .error-page
+    {
+        font-size: 80%;
+    }
+}
+@media (max-width:600px)
+{
+    .error-page
+    {
+        font-size: 70%;
+    }
+}

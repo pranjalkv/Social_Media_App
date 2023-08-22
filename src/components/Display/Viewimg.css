@@ -1,0 +1,248 @@
+#image-popup
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0e63ad43;
+}
+.image-dis {
+    width: 90%;
+    height: 90%;
+  background-color: #000000;
+}
+.img-dis-div 
+{
+    height: 90%;
+    --bs-gutter-x:0;
+    padding-left: 1%;
+}
+.btnclose
+{
+    position: absolute;
+    left: 2px;
+    top:2px;
+    color: #ffffff;
+    background-color: transparent;
+    border-radius: 7px;
+    box-shadow: none;
+    border-color: transparent;
+    font-size: 30px;
+    padding: 0 4px 3px 4px;
+}
+.btnclose:hover
+{
+    border-color: black;
+}
+.image-container
+{
+    height: 100%;
+}
+.image-part
+{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.info-part
+{
+    width: 100%;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+.profile-img-info
+{
+    width:40px;
+    height: 42px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.img-info-div
+{
+    padding: 0.5%;
+    position: relative;
+    height: 100%;
+    --bs-gutter-x:0;
+    background-color: white;
+     overflow-y: auto;
+}
+.info-time-name
+{
+    padding-bottom:2%;
+}
+.nameid
+{
+    font-weight: 600;
+}
+.editor{
+    position: relative;
+}
+.btn-modal-list
+{
+    position: absolute;
+    right: 0;
+    top:35px;
+    text-align: center;
+    --bs-list-group-bg: #ffffff;
+    width: 50%;
+    box-shadow: 2px 2px 14px #383636;
+    cursor: pointer;
+      font-weight: 400;
+}
+.editC,.deleteImg
+{
+    position: fixed;
+    z-index: 12;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff6e;
+  
+}
+.deleteImg
+{
+    text-align: center;
+}
+.editC>.card
+{
+    width: 30%;
+}
+.edit-area
+{
+     width: 100%;
+  resize: none;
+  margin-bottom: 1%;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.124);
+  font-size: 1.2em;
+  padding: 1%;
+}
+.list-group-item:hover
+{
+    background-color: #e7e7e7;
+}
+.info-time-name>p
+{
+    font-size: 0.9em;
+    margin-left: 7px;
+    margin-bottom: 0;
+}
+.like-cmt
+{
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.684);
+}
+.div-info-btn
+{
+    padding: 3px 0;
+    border-top:1px solid rgba(0, 0, 0, 0.4) ;
+    border-bottom:1px solid rgba(0, 0, 0, 0.4) ;
+}
+.act
+{
+    color: #000000ae;
+    width: 80%;
+    border: none;
+    font-weight: bolder;
+}
+.act:hover
+{
+    color:  rgba(0, 0, 0, 0.684);
+    background-color: #00000022;
+}
+.all-comment
+{
+    margin:6px auto;    
+        display: flex;
+    flex-direction: column;
+}
+.comnt-name
+{
+    font-weight: 900;
+    margin-left: 4px;
+}
+.info-comment
+{
+    width: 100%;
+    background-color: #cccccc50;
+    padding: 3px 3px 0 3px;
+    border-radius: 7px;
+}
+.time-comment
+{
+    text-align: end;
+    color: #969191;
+    font-size: 0.8em;
+}
+.del-btn-com
+{
+    border: none;
+    color: #969191;
+}
+.comnt-img
+{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-left: 2px;
+}
+.comnt-name>span
+{
+    font-weight: normal;
+}
+
+.div-comment-box
+{
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    background-color: #ffffff92;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+.comment-box {
+  width: 100%;
+}
+
+.input-wrapper {
+  flex: 1;
+}
+.comment-input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.post-button {
+  background-color: var(--green);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  right:0;
+}
+
+.post-button:hover {
+  background-color: #0b8d60;
+}
+
+.noClk
+{
+    pointer-events: none;
+}

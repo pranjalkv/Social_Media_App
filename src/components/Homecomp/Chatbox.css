@@ -1,0 +1,120 @@
+
+.chat-box
+{
+    position: relative;
+    width: 60%;
+    border: 1px solid #464b5d;
+    height: 100vh;
+    box-shadow: 2px 2px 2px solid #464b5d;
+    font-size: 100%;
+     max-width: 1350px;
+}
+.chat-header
+{
+    background-color:#464b5d;
+    color: #ffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 16;
+}
+.chat-img
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.all-chats 
+{
+    height: 96vh;
+    overflow-y: auto;
+      position: relative;
+      z-index: 2;
+      background-color: #ffffff;
+}
+.send-chat
+{
+    background-color: var(--green);
+    color: white;
+    margin-left: 0;
+    align-self: flex-end;
+}
+.para-chat
+{
+    width: fit-content;
+    border-radius: 5px;
+    max-width: 75%;
+      overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 0 auto;
+
+}
+.recv-chat
+{
+    background-color: #e9e8e8;
+    margin-right: 10px;
+}
+.chat-write
+{
+    background-color: #ffffff;
+    border-style:ridge none none none;
+    border-width: 1px;
+    border-color: rgb(162, 162, 162);
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+      -webkit-box-shadow: 0px -4px 3px rgba(95, 95, 95, 0.32);
+  -moz-box-shadow: 0px -4px 3px rgba(95, 95, 95, 0.32);
+  box-shadow: 0px -4px 3px rgba(95, 95, 95, 0.32);
+}
+
+.chat-time
+{
+    font-size: 0.8em;
+    position: absolute;
+}
+.left-time
+{
+        color: var(--green);
+    left: 1%;
+}
+.right-time
+{
+    right: 1%;
+
+}
+.chat-inp
+{
+    width: 85%;
+    border: none;
+}
+.chat-btn
+{
+    width: 10%;
+    height: inherit;
+    font-weight: 600;
+    border: none;
+}
+@media (max-width:1368px) and (min-width:768px)
+{
+    .chat-box
+    {
+        width: 90%;
+        font-size: 85%;
+    }
+}
+@media (max-width:768px)
+{
+    .chat-box
+    {
+        width: 90%;
+        height:100%;
+        font-size: 75%;
+    }
+    .all-chats 
+    {
+        height: calc(96vh - 50px);
+    }
+
+}

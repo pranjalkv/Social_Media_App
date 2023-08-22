@@ -1,0 +1,128 @@
+.compHome
+{
+    position: absolute;
+    top:10px;
+    right:80px;
+}
+.each-hero
+{
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 6px 6px 20px rgb(165, 165, 165);
+    border-radius: 10px;
+    width: 550px;
+}
+.user-hero-dp
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.hero-name
+{
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: 1%;
+    font-size: 1.2em;
+    width: 60%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: nowrap;
+    cursor: pointer;
+}
+.hero-time
+{
+    font-size: 0.8em;
+    color: #a39f9f;
+}
+.hero-imgs
+{
+    width: 100%;
+    height: 90%;
+    max-height: 500px;
+    object-fit: cover;
+}
+.like-cmt-hero
+{
+        font-weight: 600;
+    color: rgba(0, 0, 0, 0.684);
+}
+.hero-info-btn
+{
+    padding: 3px 0;
+    border-top:1px solid rgba(0, 0, 0, 0.4) ;
+}
+.hact
+{
+    color: #000000ae;
+    width: 80%;
+    border: none;
+    font-weight: bolder;
+}
+.hact:hover
+{
+    color:  rgba(0, 0, 0, 0.684);
+    background-color: #00000022;
+}
+.all-comment
+{
+    margin:6px auto;    
+        display: flex;
+    flex-direction: column;
+}
+.comnt-name
+{
+    font-weight: 900;
+    margin-left: 4px;
+}
+.info-comment
+{
+    width: 100%;
+    background-color: #cccccc50;
+    padding: 3px 3px 0 3px;
+    border-radius: 7px;
+}
+.show-more-btn
+{
+font-weight: 600;
+border: none;
+background-color: transparent;
+}
+.colorGreen
+{
+    color: var(--green);
+}
+@media (max-width:1368px) and (min-width:768px)
+{
+    .compHome
+    {
+        display: none;
+    }
+    .each-hero
+{
+    margin: 15px auto;
+    background-color: #ffffff;
+    box-shadow: 6px 6px 20px rgb(165, 165, 165);
+    border-radius: 10px;
+    width: 500px;
+}
+}
+@media (max-width:768px)
+{
+    .compHome
+    {
+        display: none;
+    }
+        .each-hero
+{
+    margin: 12px auto;
+    width: 98%;
+    max-width: 500px;
+}
+#home-page
+{
+    margin-top: 60px;
+}
+}

@@ -1,0 +1,63 @@
+:root
+{
+    --green: #00A676;
+    --white:#f7f3f3;
+    --black:#475b5a;
+    --dark:#233D53;
+}
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body
+{
+     font-family: 'PT Sans', sans-serif;
+}
+.green-btn
+{
+    background-color: var(--green);
+    color: white;
+}
+.green-btn:hover
+{
+    background-color: #088965;
+    color: white;
+}
+a:-webkit-any-link
+{
+  text-decoration: none;
+  display: block;
+}
+.error-msg
+{
+  margin: 1% auto;
+  color: red;
+  text-align: center;
+}
+#hero
+{
+    margin-left: 18%;
+}
+@media (max-width:1368px) and (min-width:768px)
+{
+     #hero
+    {
+        margin-left: 95px;
+    }
+    .editC>.card
+    {
+        width: 50%;
+    }
+
+}
+@media (max-width:768px)
+{
+      .editC>.card
+    {
+        width: 70%;
+    }
+}
