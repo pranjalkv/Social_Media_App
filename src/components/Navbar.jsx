@@ -98,7 +98,7 @@ function Navbar({userName,setUserName,userid})
 
              <li onClick={()=>setOpensearch(prev=>!prev)}><FaSistrix 
              className="nav-icon"/> 
-             <span className="nav-name">Explore</span></li> 
+             <span className="nav-name">Search</span></li> 
              
              <li><NavLink to="/chat"><FaEnvelope className="nav-icon"/> 
              <span className="nav-name">Messages</span></NavLink> </li>

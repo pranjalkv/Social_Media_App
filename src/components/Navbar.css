@@ -107,6 +107,7 @@ color: inherit;
     border-radius: 100%;
     width: 40px;
     height: 40px;
+    min-width: 40px;
     object-fit: cover;
 }
 .btn-logout>p
@@ -295,6 +296,7 @@ color: inherit;
     border-radius: 100%;
     width: 30px;
     height: 30px;
+    min-width: 30px;
 }
     .btn-logout>p
     {

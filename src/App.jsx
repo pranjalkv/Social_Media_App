@@ -21,14 +21,10 @@ function App() {
     const [userName, setUserName] = useState("");
     const [userid,setUserid]=useState("");
     const[loader,setLoader]=useState(true);
-      // const[foldId,setfoldId]=useState("")
-      //  const[picId,setpicId]=useState("")
 
   useEffect(() => {
     const log= onAuthStateChanged(auth,(user) => {
-      console.log("gj",user);
       if (user) {
-        console.log("dis",user.displayName)
         setUserName(user.displayName);
         setUserid(user.uid)
       } else
@@ -37,21 +33,6 @@ function App() {
     });
      return () => log();
   }, []);
-
-  // useEffect(()=>{
-  //  async function dataUser()
-  //  {
-  //   try{
-  //   const appData=await getDocs(userFire)
-  //   setfoldId(appData.docs[0].id)
-  //   setpicId(appData.docs[0].data().dpUrl)
-  //   }
-  //   catch(err){
-  //     console.log(err)
-  //   }
-  //  }
-  //  dataUser()
-  // },[])
 
   if(loader)
   {

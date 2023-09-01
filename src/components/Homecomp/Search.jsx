@@ -28,8 +28,6 @@ function Search()
         searcher();
     },[])
 
-    console.log(searchWord)
-
     function palceDP(e)
     {
         e.target.src="/images/profileimg.jpg"

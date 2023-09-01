@@ -60,9 +60,6 @@ function Home()
     fetchData();
   },[])
 
-
- console.log("eit353",lastData)
- console.log("244",homepic)
     useEffect(()=>{
       
       const fetchDp=async()=>
@@ -123,35 +120,10 @@ function Home()
 }
    }
 
-  //  useEffect(()=>{
-
-  //   const newImg=query(collection(db,"prof_img"),orderBy("timestamp","desc"));
-  //   try{
-  //   const getsnap=onSnapshot(newImg,(sn)=>
-  //   {
-  //     setLikeData(sn.docs.map((lyk)=>({...lyk.data().Likes})))
-  //         return ()=>getsnap;
-  //   })
-  // }
-  // catch(err)
-  // {
-  //   console.log(err);
-  // }
-
-  //  },[])
-
-  //  console.log("grsy",likeData)
-
-
-    console.log("eit3574",lastData)
-
-
-
-
 
   function handleScroll()
   {
-     if(window.innerHeight + document.documentElement.scrollTop+1 >= document.documentElement.scrollHeight)
+     if(window.innerHeight + document.documentElement.scrollTop+1 >= document.documentElement.scrollHeight-100)
       moreLoad()
   }
   
@@ -240,8 +212,6 @@ setCurrid(data.uid);
     if(!closePic)
     document.body.style.overflow="auto"
 
-
-  console.log(homepic)
     return (      
     <section id="home-page">
       <div className="compHome">
@@ -250,8 +220,8 @@ setCurrid(data.uid);
     <div>
       {homepic?.map((ele,i)=><div className="each-hero" key={ele?.id}>
         <div className="d-flex align-items-center p-2">
-        {dpPics?.filter((dp)=>(ele.uid==dp.uid)).map((filterDp)=><img className="user-hero-dp" 
-        src={filterDp.dpUrl} alt="" onClick={()=>opentheProf(ele.uid)} onError={profErr}/>)}
+        {dpPics?.filter((dp)=>(ele.uid==dp.uid)).map((filterDp,j)=><img className="user-hero-dp" 
+        src={filterDp.dpUrl} key={j} alt="" onClick={()=>opentheProf(ele.uid)} onError={profErr}/>)}
         <div className="w-100 d-flex flex-column mx-1">
         <p className="hero-name m-0" onClick={()=>opentheProf(ele.uid)}>{ele.nameid}</p>
         <p className="hero-time m-0">{formatDate(ele.timestamp.seconds)}</p>

@@ -51,7 +51,6 @@ function Profile()
     const postLen=query(collection(db,"prof_img"),where("uid",'==' ,pguid))
     const len = await getDocs(postLen);
   setPostsize(len.size)
-  console.log(postsize)
   }
 
   lengthPost();
@@ -159,7 +158,7 @@ function Profile()
 
       if(!changePro)
       document.body.style.overflow = 'auto';
-
+console.log(pguid,"gd")
   // useEffect(()=>
   // {
   //  const getProf= async()=>
@@ -228,8 +227,6 @@ function Profile()
     setSpin(false)
     setchangeDp("abc")
     setChangepro(false)
-    console.log(docId)
-    console.log(changeDp)
   }
 
   async function getFollow()
@@ -339,9 +336,6 @@ function Profile()
     return len
   }
 
-
-  // / let trailer1=vidf.findIndex((obj)=>obj.name==="Official Trailer 1")
-  console.log("ret",userProfile)
     return(
         <section id="user-profile">
           {userProfile.name?<div className="div-under-profile">

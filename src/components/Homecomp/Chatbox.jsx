@@ -25,7 +25,6 @@ function Chatbox({chatDp,roomId,chatnm,userid,recvId})
     {
         setmsgWrite(e.target.value);
     }
-    console.log(msgWrite)
     async function addChats(e)
     {
          const times={
@@ -69,7 +68,6 @@ function Chatbox({chatDp,roomId,chatnm,userid,recvId})
     return () => unsubscribe();
     },[recvId])
 
-    console.log("Fdsgs",allChats)
 
     function noImgerr(e)
     {

@@ -6,6 +6,7 @@ import { db,storage } from '../firebase';
 import { collection,addDoc,FieldValue,serverTimestamp} from "firebase/firestore";
 import { ref,uploadBytes,getDownloadURL,uploadBytesResumable} from "firebase/storage";
 import { v4 } from "uuid";
+import { useNavigate } from "react-router-dom";
 
 
 function Files({modal,openModal,uidprop,userName})
@@ -13,6 +14,7 @@ function Files({modal,openModal,uidprop,userName})
     const[image,setImage]=useState(null)
     const[caption,setCaption]=useState("")
     const[prog,setProg]=useState(0)
+    const navigate=useNavigate()
 
     function choose(e)
     {
@@ -51,7 +53,7 @@ function Files({modal,openModal,uidprop,userName})
             Likes:[],
             comment:[]
           })
-            console.log(imgRef);
+          navigate(`/profile/${uidprop}`)
         })
         .catch((err)=>
         {

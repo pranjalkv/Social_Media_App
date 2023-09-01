@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { FaCommentAlt,FaHeart} from "react-icons/fa";
-import { collection,onSnapshot,orderBy,query,where } from "firebase/firestore";
+import { collection,onSnapshot,orderBy,query,where ,getDocs } from "firebase/firestore";
 import { db, } from "../firebase";
 import "./Imgprof.css"
 import Viewimg from "./Display/Viewimg";
@@ -21,17 +21,21 @@ function Imgprof({pguid,authid,authname})
         setDocid(imgCick.id);
         setiUid(imgCick.uid);
     }
-    console.log("ImgPRof feutjf",authid,pguid)
+
     const[allImg,setAllimg]=useState([])
     const imgStore=query(collection(db,"prof_img"),where("uid",'==' ,pguid),orderBy("timestamp","desc"))
+
+    
     useEffect(()=>
     {
+       
                 const imgData= onSnapshot(imgStore,(snap)=>{
                 setAllimg(snap.docs.map((doc) => ({...doc.data(),id:doc.id})))
-                
                 })    
                 return ()=>imgData;
+        
     },[pguid])
+
 
 
     function imgError(e)

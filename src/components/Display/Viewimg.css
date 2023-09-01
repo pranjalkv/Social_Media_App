@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #0e63ad43;
+  background-color: #bfd0de43;
 }
 .image-dis {
     width: 90%;
@@ -25,19 +25,15 @@
 .btnclose
 {
     position: absolute;
-    left: 2px;
+    right: 2px;
     top:2px;
-    color: #ffffff;
+    color: var(--dark);
     background-color: transparent;
     border-radius: 7px;
     box-shadow: none;
     border-color: transparent;
     font-size: 30px;
     padding: 0 4px 3px 4px;
-}
-.btnclose:hover
-{
-    border-color: black;
 }
 .image-container
 {

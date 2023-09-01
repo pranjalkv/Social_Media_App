@@ -27,23 +27,6 @@ import Loadspin from "../Loadspin";
     const[write,setWrite]=useState(true)
     const[dpPics,setDppics]=useState([])
 
-    console.log("feutjf",authid,pguid)
-//      useEffect(() => {
-//     const checkOutside = e => {
-//       if (openEdit && mref.current && !mref.current.contains(e.target))
-//       {
-//         setopenEdit(false)
-        
-//       }
-//     }
-
-//     document.addEventListener("mousedown", checkOutside)
-  
-//     return () => {
-//       document.removeEventListener("mousedown", checkOutside)
-//     }
-//   }, [openEdit])
-
 function captionChange()
 {
 
@@ -103,7 +86,6 @@ function captionChange()
     fetchDp()
   },[])
 
-    console.log(comData)
      if (!views) {
     return <Loadspin/>;
   }
@@ -156,7 +138,7 @@ function captionChange()
     try
     {
       await deleteDoc(viewData)
-      alert("Img Deleted");
+      alert("Image Deleted");
     }
     catch(err)
     {

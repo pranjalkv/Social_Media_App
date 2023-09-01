@@ -19,7 +19,6 @@ function Login({notLog})
     {
         setCred({...cred,[e.target.name]:e.target.value})
         setErrormsg("");
-        console.log(cred)
     }
 
     function handleSubmit(e)
@@ -35,7 +34,6 @@ function Login({notLog})
     signInWithEmailAndPassword(auth, cred.email, cred.password)
       .then(async (res) => {
         setDisbtn(false);
-        console.log("uid",res)
       })
       .catch((err) => {
         setDisbtn(false);
@@ -98,9 +96,9 @@ function Login({notLog})
         <p>Don't have an account <Link to="/signup">Signup</Link></p>      
 
     </form>
-    {/* <hr />
+    <hr />
     <p style={{marginBottom:"0"}}><span style={{fontWeight:600}}>Test Email: </span>sample@web.com</p>
-    <p style={{marginBottom:"0"}}><span style={{fontWeight:600}}>Password: </span>Guestreactdev</p> */}
+    <p style={{marginBottom:"0"}}><span style={{fontWeight:600}}>Password: </span>Guestreactdev</p>
     </div>
     )
 }

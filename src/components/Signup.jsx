@@ -1,5 +1,5 @@
 import "./Signup.css"
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import { auth,db } from "../firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { Link ,useNavigate } from "react-router-dom";
@@ -19,7 +19,6 @@ function Signup()
     {
         setCred({...cred,[e.target.name]:e.target.value})
         setErrormsg("");
-        console.log(cred)
     }
 
     async function handleSubmit(e)
@@ -39,7 +38,6 @@ function Signup()
       .then(async (res) => {
         setDisbtn(false);
         const user = res.user;
-        console.log(res)
         await updateProfile(user, {
           displayName: cred.name,
         });

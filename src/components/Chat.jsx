@@ -22,11 +22,6 @@ function Chat()
     // const dp_all=query(collection(db,"dp_data"),where('name','<',"Guest 001"),where('dpUrl','==',"abc"))
     const[fewData,setFewdata]=useState([])
 
-    function goProf(e)
-    {
-          e.stopPropagation()
-        console.log(e)
-    }
 
 
 
@@ -75,7 +70,7 @@ function Chat()
         }
         getChathis()
     },[])
-    console.log("cahtasf",chatHis)
+
     useEffect(()=>
     {
        const getFew=async()=>
@@ -92,7 +87,7 @@ function Chat()
         }
         getFew()
     },[])
-    console.log(fewData)
+
 
     return(
     <>
@@ -101,7 +96,7 @@ function Chat()
         {fewData.map((item)=>(<div className="div-chat-user py-1" key={item.iddp} 
          onClick={()=>chatOpen(item.uid,item.dpUrl,item.name)}>
         <img className="chat-user-img" src={item.dpUrl} alt="" 
-         onError={(e)=>e.target.src="/images/profileimg.jpg"}  id={item.uid} onClick={goProf}/>
+         onError={(e)=>e.target.src="/images/profileimg.jpg"}  id={item.uid} />
         <div className="info-chat">
         <p className="name-chat-user mb-0 text-truncate">{item.name}</p>
         {chatHis.filter((curr)=>(curr.id==item.uid +userid || curr.id==userid + item.uid)).map((msg,i)=><p 
